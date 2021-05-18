@@ -144,7 +144,7 @@ function SpawnObstacle () {
 
     let size = RandomIntInRange(20, 70);
     let type = RandomIntInRange(0, 1);
-    let obstacle = new Obstacle(canvas.width + size, canvas.height - size, size, size, );
+    let obstacle = new Obstacle(canvas.width + size, canvas.height - size, size, size, '#2484E4');
     //console.log(size);
 
     if (type == 1){
@@ -219,8 +219,8 @@ function Update () {
             player.y + player.h > o.y ) {
 
                 obstacles = [];
-                score = score;
-                alert ("Game Over! Your total score was : " + score + " (Press Space to play again)")
+                score = 0;
+                alert ("Game Over! Your total score was : " + " (Press Space to play again)")
                 spawnTimer = initialSpawnTimer;
                 gameSpeed = 3;
                 window.localStorage.setItem('highscore',highscore)
